@@ -73,7 +73,7 @@ metadata:
     - scheme: url
       identifier: https://github.com/molmod/acid
       resource_type: dataset
-      relation_type: issourceof
+      relation_type: compiles
     - scheme: url
       identifier: https://github.com/molmod/stacie
       resource_type: software
