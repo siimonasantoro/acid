@@ -16,6 +16,10 @@ In addition to the ACID test set, this repository also contains the scripts to
 validate [STACIE](https://molmod.github.io/stacie/),
 a software package for the computation of the autocorrelation integral.
 
+A description of the dataset, a summary of the validation results,
+and an archived version of this repository can be found on Zenodo:
+[10.5281/zenodo.15722903](https://doi.org/10.5281/zenodo.15722903).
+
 ## License
 
 All files in this dataset are licensed under a
