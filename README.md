@@ -29,20 +29,16 @@ If you use this dataset in your research, please cite the following paper:
 > "STable AutoCorrelation Integral Estimator (STACIE): Robust and accurate transport properties from molecular dynamics simulations"
 >
 > ```bibtex
+> @article{Toraman_2025,
+>  title = {STable AutoCorrelation Integral Estimator (STACIE): Robust and accurate transport properties from molecular dynamics simulations},
+>  url = {https://arxiv.org/abs/2506.?????},
+>  doi = {10.48550/arXiv.2506.?????}
+>  publisher = {arXiv},
+>  author = {G"{o}zdenur Toraman and Dieter Fauconnier and Toon Verstraelen},
+>  year = {2025},
+>  month = jun
+> }
 > ```
-
-@article{Toraman_2025,
-title = {STable AutoCorrelation Integral Estimator (STACIE): Robust and accurate transport properties from molecular dynamics simulations},
-url = {https://arxiv.org/abs/2506.?????},
-doi = {10.48550/arXiv.2506.?????}
-publisher = {arXiv},
-author = {G"{o}zdenur Toraman and Dieter Fauconnier and Toon Verstraelen},
-year = {2025},
-month = jun
-}
-
-```
-
 
 ## Overview
 
