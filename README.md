@@ -23,10 +23,11 @@ All files in this dataset are licensed under a
 
 ## Citation
 
-If you use this dataset in your research, please cite the following paper:
+If you use this dataset in your research, please cite the following priprint:
 
 > Gozdenur, T.; Fauconnier, D.; Verstraelen, T.
 > "STable AutoCorrelation Integral Estimator (STACIE): Robust and accurate transport properties from molecular dynamics simulations"
+> arXiv 2025, arXiv:2506.?????.
 >
 > ```bibtex
 > @article{Toraman_2025,
@@ -63,4 +64,6 @@ The script is primarily tested on Linux, but may also work on other operating sy
 
 It is recommended to install and setup [`direnv`](https://direnv.net/)
 to automatically activate the virtual environment when you enter the repository directory.
+
+```
 ```
