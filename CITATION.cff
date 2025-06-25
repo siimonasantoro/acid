@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: If you use this software, please cite it using these metadata.
 title: The AutoCorrelation Integral Drill (ACID) Test Set
 abstract: >-
-  This repository contains the scripts to regenerate
+  This repository contains the scripts and StepUp workflows to regenerate
   the "AutoCorrelation Integral Drill" (ACID) test set.
   The ACID test set comprises a diverse collection of algorithmically generated time series
   designed to evaluate the performance of algorithms that compute the autocorrelation integral.

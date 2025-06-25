@@ -1,7 +1,8 @@
-# The AutoCorrelation Integral Drill (ACID) Test Set and Its Application to the Validation of the STable AutoCorrelation Integral Estimator (STACIE)
+# The AutoCorrelation Integral Drill (ACID) Test Set
 
-This repository contains the scripts to regenerate
-the "AutoCorrelation Integral Drill" (ACID) test set.
+This repository contains the scripts and
+[StepUp workflows](https://reproducible-reporting.github.io/stepup-core/stable/)
+to regenerate the "AutoCorrelation Integral Drill" (ACID) test set.
 The ACID test set comprises a diverse collection of algorithmically generated time series
 designed to evaluate the performance of algorithms that compute the autocorrelation integral.
 The set contains in total 15360 test cases, and each case consists of one or more time series.
@@ -12,8 +13,8 @@ For each combination of kernel, number of sequences and sequence length,
 to allow for a systematic validation of uncertainty estimates.
 The total dataset, once generated, is about 80 GB in size.
 
-In addition to the ACID test set, this repository also contains the scripts to
-validate [STACIE](https://molmod.github.io/stacie/),
+In addition to the ACID test set, this repository also contains scripts and workflows
+to validate [STACIE](https://molmod.github.io/stacie/),
 a software package for the computation of the autocorrelation integral.
 
 A description of the dataset, a summary of the validation results,
