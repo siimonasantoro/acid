@@ -1,5 +1,5 @@
-This repository contains the scripts to regenerate the "AutoCorrelation Integral Drill" (ACID)
-test set.
+This repository contains the scripts to regenerate
+the "AutoCorrelation Integral Drill" (ACID) test set.
 The ACID test set comprises a diverse collection of algorithmically generated time series
 designed to evaluate the performance of algorithms that compute the autocorrelation integral.
 The set contains in total 15360 test cases, and each case consists of one or more time series.

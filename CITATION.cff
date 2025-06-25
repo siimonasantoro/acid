@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+title: The AutoCorrelation Integral Drill (ACID) Test Set
+abstract: >-
+  This repository contains the scripts to regenerate
+  the "AutoCorrelation Integral Drill" (ACID) test set.
+  The ACID test set comprises a diverse collection of algorithmically generated time series
+  designed to evaluate the performance of algorithms that compute the autocorrelation integral.
+  The set contains in total 15360 test cases, and each case consists of one or more time series.
+  The cases differ in the kernel characterizing the time correlations, the number of time series,
+  and the length of the time series.
+  For each combination of kernel, number of sequences and sequence length,
+  64 test cases are generated with different random seeds
+  to allow for a systematic validation of uncertainty estimates.
+  The total dataset, once generated, is about 80 GB in size.
+authors:
+  - family-names: Toraman
+    given-names: Gozdenur
+    orcid: https://orcid.org/0000-0001-6785-333X
+    affiliation: >-
+      Labo Soete,
+      Ghent University,
+      Technologiepark-Zwijnaarde 46,
+      B-9052,
+      Ghent,
+      Belgium
+  - family-names: Fauconnier
+    given-names: Dieter
+    orcid: https://orcid.org/0000-0002-0257-4687
+    affiliation: >-
+      Labo Soete,
+      Ghent University,
+      Technologiepark-Zwijnaarde 46,
+      B-9052,
+      Ghent,
+      Belgium
+  - family-names: Verstraelen
+    given-names: Toon
+    orcid: https://orcid.org/0000-0001-9288-5608
+    affiliation: >-
+      Center for Molecular Modeling (CMM),
+      Ghent University,
+      Technologiepark-Zwijnaarde 46,
+      B-9052,
+      Zwijnaarde, Belgium
+license: LGPL-3.0-or-later
+repository-code: "https://github.com/molmod/acid"

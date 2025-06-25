@@ -22,8 +22,8 @@ metadata:
   publisher: Zenodo
   resource_type: dataset
   creators:
-    - family_name: Gozdenur
-      given_name: Toraman
+    - family_name: Toraman
+      given_name: Gozdenur
       identifiers:
         orcid: '0000-0001-6785-333X'
       affiliations:
