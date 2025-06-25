@@ -69,7 +69,7 @@ metadata:
     - scheme: arxiv
       identifier: '2506.?????'
       resource_type: publication
-      relation_type: describes
+      relation_type: isdescribedby
     - scheme: url
       identifier: https://github.com/molmod/acid
       resource_type: dataset
