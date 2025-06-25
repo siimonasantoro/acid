@@ -65,6 +65,19 @@ metadata:
             Technologiepark-Zwijnaarde 46,
             B-9052,
             Zwijnaarde, Belgium
+  related:
+    - scheme: arxiv
+      identifier: '2506.?????'
+      resource_type: publication
+      relation_type: describes
+    - scheme: url
+      identifier: https://github.com/molmod/acid
+      resource_type: dataset
+      relation_type: issourceof
+    - scheme: url
+      identifier: https://github.com/molmod/stacie
+      resource_type: software
+      relation_type: requires
   funding:
     - funder:
         ror: 00cv9y106  # Ghent University
