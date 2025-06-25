@@ -44,6 +44,7 @@ def case_info(kernel: str, model: str):
             for nstep in nsteps
         ],
         "out": [
+            f"{out_prefix}_success.csv",
             f"{out_prefix}_neff.csv",
             f"{out_prefix}_cost_zscore.csv",
             f"{out_prefix}_criterion_zscore.csv",
@@ -72,11 +73,14 @@ def run(
         ("criterion_zscore", 2.0, True),
     ]
     cells = {field: [] for field, _, _ in fields}
+    cells["success"] = []
     for nstep in nsteps:
         rows = {}
         for field, _, _ in fields:
             rows[field] = []
             cells[field].append(rows[field])
+        rows["success"] = []
+        cells["success"].append(rows["success"])
         for nseq in nseqs:
             inp = INP_TEMPLATE.format(
                 kernel=kernel,
@@ -85,16 +89,17 @@ def run(
                 model=model,
             )
             data = np.load(inp)
+            rows["success"].append(str(len(data["neffs"])))
             for field, threshold, upper in fields:
                 values = data[field + "s"]
                 num_safe = (values >= threshold if upper else values <= threshold).sum()
                 rows[field].append(str(num_safe))
 
     # Write CSV files with table data.
-    for field, _, _ in fields:
+    for field, table in cells.items():
         with open(f"{out_prefix}_{field}.csv", "w") as fh:
             print(",".join(["", *col_header]), file=fh)
-            for header, row in zip(row_header, cells[field], strict=True):
+            for header, row in zip(row_header, table, strict=True):
                 print(",".join([header, *row]), file=fh)
 
 

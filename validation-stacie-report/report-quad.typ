@@ -72,6 +72,8 @@ For a full discussion of the results, we refer to the STACIE paper: TODO ADD CIT
   - Results are shown only for the $M=64$.
   - The color code for different $N$
     corresponds to the legends shown in figures (b), (c), (d) and (e).
++ *Number of successful test cases*
+  (Failures are typically due to not finding any cutoff frequency with acceptable results.)
 + *Sanity check counts for the effective number of points*
   - Number of test cases for each combination of $N$ and $M$
     where the effective number of points used in the fit is below $20 P = 40$.
@@ -98,56 +100,43 @@ For a full discussion of the results, we refer to the STACIE paper: TODO ADD CIT
         ),
         grid.cell(
             colspan: 2,
-            image("figures/plot_acid_sequences_" + kernel + "_nstep01024_nseq0256.svg"),
+            image(strfmt("figures/plot_acid_sequences_{}_nstep01024_nseq0256.svg", kernel)),
         ),
         [*(b) Scaling of uncertainty of the autocorrelation integral with input data*],
         [*(c) Assessment of the error estimate of the autocorrelation integral*],
-        image("figures/plot_acint_scaling_" + kernel + "_quad.svg"),
-        image("figures/plot_acint_ratios_" + kernel + "_quad.svg"),
+        image(strfmt("figures/plot_acint_scaling_{}_quad.svg", kernel)),
+        image(strfmt("figures/plot_acint_ratios_{}_quad.svg", kernel)),
         [*(d) Validation of the Maximum A Posteriori (MAP) estimate*],
         [*(e) Sensitivity of the autocorrelation integral to the cutoff frequency*],
-        image("figures/plot_mc_" + kernel + ".svg"),
-        image("figures/plot_cutoff_acint_" + kernel + "_nseq0064_quad.svg"),
+        image(strfmt("figures/plot_mc_{}.svg", kernel)),
+        image(strfmt("figures/plot_cutoff_acint_{}_nseq0064_quad.svg", kernel)),
       )
     )
 
     // tables
     pagebreak()
 
-    align(center, text(weight: "bold")[
-      (f) Sanity check counts for the effective number of points
-    ])
-    let neff_data = csv("tables/" + kernel + "_quad_neff.csv").flatten()
-    table(
-      columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-      stroke: (x, y) => if y == 0 {
-        (bottom: 0.7pt + black)
-      },
-      ..neff_data.map(x => [#eval(x)]),
-    )
+    // tables
+    let table_cases = (
+      ("success", "(f) Number of successful test cases"),
+      ("neff", "(g) Sanity check counts for the effective number of points"),
+      ("cost_zscore", "(h) Sanity check counts for the regression cost z-score"),
+      ("criterion_zscore", "(i) Sanity check counts for the cutoff criterion z-score"),
 
-    align(center, text(weight: "bold")[
-      (g) Sanity check counts for the regression cost z-score
-    ])
-    let cost_zscore_data = csv("tables/" + kernel + "_quad_cost_zscore.csv").flatten()
-    table(
-      columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-      stroke: (x, y) => if y == 0 {
-        (bottom: 0.7pt + black)
-      },
-      ..cost_zscore_data.map(x => [#eval(x)]),
     )
+    for (field, label) in table_cases {
+      align(center)[
+        #text(weight: "bold")[#label]
+        #let data = csv(strfmt("tables/{}_quad_{}.csv", kernel, field)).flatten()
+        #table(
+          columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+          stroke: (x, y) => if y == 0 {
+            (bottom: 0.7pt + black)
+          },
+          ..data.map(x => [#eval(x)]),
+        )
+      ]
+    }
 
-    align(center, text(weight: "bold")[
-      (h) Sanity check counts for the cutoff criterion z-score
-    ])
-    let criterion_zscore_data = csv("tables/" + kernel + "_quad_criterion_zscore.csv").flatten()
-    table(
-      columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-      stroke: (x, y) => if y == 0 {
-        (bottom: 0.7pt + black)
-      },
-      ..criterion_zscore_data.map(x => [#eval(x)]),
-    )
   }
 }

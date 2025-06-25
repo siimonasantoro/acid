@@ -74,6 +74,8 @@ For a full discussion of the results, we refer to the STACIE paper: TODO ADD CIT
 + *Sensitivity of the exponential correlation time to the cutoff frequency.*
   - The same conventions as in (f) apply,
     but this figure shows results for the exponential correlation time.
++ *Number of successful test cases*
+  (Failures are typically due to not finding any cutoff frequency with acceptable results.)
 + *Sanity check counts for the effective number of points*
   - Number of test cases for each combination of $N$ and $M$
     where the effective number of points used in the fit is below $20 P = 40$.
@@ -100,16 +102,16 @@ For a full discussion of the results, we refer to the STACIE paper: TODO ADD CIT
         ),
         grid.cell(
             colspan: 2,
-            image("figures/plot_acid_sequences_" + kernel + "_nstep01024_nseq0256.svg"),
+            image(strfmt("figures/plot_acid_sequences_{}_nstep01024_nseq0256.svg", kernel)),
         ),
         [*(b) Scaling of uncertainty of the autocorrelation integral with input data*],
         [*(c) Assessment of the error estimate of the autocorrelation integral*],
-        image("figures/plot_acint_scaling_" + kernel + "_lorentz.svg"),
-        image("figures/plot_acint_ratios_" + kernel + "_lorentz.svg"),
+        image(strfmt("figures/plot_acint_scaling_{}_lorentz.svg", kernel)),
+        image(strfmt("figures/plot_acint_ratios_{}_lorentz.svg", kernel)),
         [*(d) Scaling of uncertainty of the exponential correlation time with input data*],
         [*(e) Assessment of the error estimate of the exponential correlation time*],
-        image("figures/plot_corrtime_exp_scaling_" + kernel + "_lorentz.svg"),
-        image("figures/plot_corrtime_exp_ratios_" + kernel + "_lorentz.svg"),
+        image(strfmt("figures/plot_corrtime_exp_scaling_{}_lorentz.svg", kernel)),
+        image(strfmt("figures/plot_corrtime_exp_ratios_{}_lorentz.svg", kernel)),
       )
     )
 
@@ -122,47 +124,32 @@ For a full discussion of the results, we refer to the STACIE paper: TODO ADD CIT
         align: center,
         [*(f) Sensitivity of the autocorrelation integral to the cutoff frequency*],
         [*(g) Sensitivity of the exponential correlation time to the cutoff frequency*],
-        image("figures/plot_cutoff_acint_" + kernel + "_nseq0064_lorentz.svg"),
-        image("figures/plot_cutoff_corrtime_exp_" + kernel + "_nseq0064_lorentz.svg"),
+        image(strfmt("figures/plot_cutoff_acint_{}_nseq0064_lorentz.svg", kernel)),
+        image(strfmt("figures/plot_cutoff_corrtime_exp_{}_nseq0064_lorentz.svg", kernel)),
       )
     )
 
     // tables
+    let table_cases = (
+      ("success", "(h) Number of successful test cases"),
+      ("neff", "(i) Sanity check counts for the effective number of points"),
+      ("cost_zscore", "(j) Sanity check counts for the regression cost z-score"),
+      ("criterion_zscore", "(k) Sanity check counts for the cutoff criterion z-score"),
 
-    align(center, text(weight: "bold")[
-      (h) Sanity check counts for the effective number of points
-    ])
-    let neff_data = csv("tables/" + kernel + "_lorentz_neff.csv").flatten()
-    table(
-      columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-      stroke: (x, y) => if y == 0 {
-        (bottom: 0.7pt + black)
-      },
-      ..neff_data.map(x => [#eval(x)]),
     )
+    for (field, label) in table_cases {
+      align(center)[
+        #text(weight: "bold")[#label]
+        #let data = csv(strfmt("tables/{}_lorentz_{}.csv", kernel, field)).flatten()
+        #table(
+          columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+          stroke: (x, y) => if y == 0 {
+            (bottom: 0.7pt + black)
+          },
+          ..data.map(x => [#eval(x)]),
+        )
+      ]
+    }
 
-    align(center, text(weight: "bold")[
-      (i) Sanity check counts for the regression cost z-score
-    ])
-    let cost_zscore_data = csv("tables/" + kernel + "_lorentz_cost_zscore.csv").flatten()
-    table(
-      columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-      stroke: (x, y) => if y == 0 {
-        (bottom: 0.7pt + black)
-      },
-      ..cost_zscore_data.map(x => [#eval(x)]),
-    )
-
-    align(center, text(weight: "bold")[
-      (j) Sanity check counts for the cutoff criterion z-score
-    ])
-    let criterion_zscore_data = csv("tables/" + kernel + "_lorentz_criterion_zscore.csv").flatten()
-    table(
-      columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-      stroke: (x, y) => if y == 0 {
-        (bottom: 0.7pt + black)
-      },
-      ..criterion_zscore_data.map(x => [#eval(x)]),
-    )
   }
 }
