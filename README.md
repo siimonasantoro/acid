@@ -34,7 +34,7 @@ If you use this dataset in your research, please cite the following priprint:
 > arXiv 2025, arXiv:2506.?????.
 >
 > ```bibtex
-> @article{Toraman_2025,
+> @article{Toraman2025,
 >  title = {STable AutoCorrelation Integral Estimator (STACIE): Robust and accurate transport properties from molecular dynamics simulations},
 >  url = {https://arxiv.org/abs/2506.?????},
 >  doi = {10.48550/arXiv.2506.?????}

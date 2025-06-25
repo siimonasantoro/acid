@@ -46,11 +46,11 @@ authors:
 identifiers:
   - type: doi
     value: 10.5281/zenodo.15722903
-    description: "The concept DOI of the work."
+    description: The concept DOI of the work.
 preferred-citation:
   identifiers:
     - type: other
       value: "arXiv:2506.?????"
-      description: The ArXiv preprint of the paper
+      description: The ArXiv preprint of the paper describing ACID.
 license: LGPL-3.0-or-later
 repository-code: "https://github.com/molmod/acid"
