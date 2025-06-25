@@ -68,6 +68,3 @@ The script is primarily tested on Linux, but may also work on other operating sy
 
 It is recommended to install and setup [`direnv`](https://direnv.net/)
 to automatically activate the virtual environment when you enter the repository directory.
-
-```
-```
