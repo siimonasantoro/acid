@@ -5,12 +5,18 @@ metadata:
   title: 'The AutoCorrelation Integral Drill (ACID) Test Set'
   keywords:
     - autocorrelation integral
-    - systematic validation
     - integrated correlation time
     - exponential correlation time
     - autocorrelation function
-    - power spectrum distribution
+    - ACF
+    - power spectral distribution
+    - PSD
     - STACIE
+    - systematic validation
+    - workflow
+    - StepUp
+    - Typst
+    - Python
   version: '1.0.0'
   license: cc-by-nc-sa-4.0
   publisher: Zenodo
