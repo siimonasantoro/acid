@@ -13,5 +13,8 @@ The total dataset, once generated, is about 80 GB in size.
 In addition to the ACID test set, this repository also contains scripts and workflows
 to validate [STACIE](https://molmod.github.io/stacie/),
 a software package for the computation of the autocorrelation integral.
-The results of this analysis are discussed in the paper
-[TODO](https://TODO).
+The results of this analysis are discussed in the following paper:
+
+> Gözdenur, T.; Fauconnier, D.; Verstraelen, T.
+> "STable AutoCorrelation Integral Estimator (STACIE): Robust and accurate transport properties from molecular dynamics simulations"
+> arXiv 2025, [arXiv:2506.20438](https://arxiv.org/abs/2506.20438).
