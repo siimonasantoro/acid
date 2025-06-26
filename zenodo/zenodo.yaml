@@ -19,6 +19,7 @@ metadata:
     - Python
   version: '1.0.0'
   license: cc-by-nc-sa-4.0
+  copyright: Copyright (C) 2025 The Authors
   publisher: Zenodo
   resource_type: dataset
   creators:
