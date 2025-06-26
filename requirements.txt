@@ -22,6 +22,7 @@ attrs==25.3.0
     #   cattrs
     #   jsonschema
     #   referencing
+    #   stacie
     #   stepup
     #   stepup-reprep
 beautifulsoup4==4.13.4
@@ -33,7 +34,9 @@ bleach[css]==6.2.0
 brotli==1.1.0
     # via fonttools
 cattrs==25.1.1
-    # via stepup-reprep
+    # via
+    #   stacie
+    #   stepup-reprep
 certifi==2025.6.15
     # via requests
 cffi==1.17.1
@@ -139,7 +142,9 @@ markupsafe==3.0.2
     #   jinja2
     #   nbconvert
 matplotlib==3.10.3
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   stacie
 matplotlib-inline==0.1.7
     # via
     #   ipykernel
@@ -179,6 +184,7 @@ numpy==2.3.1
     #   matplotlib
     #   numcodecs
     #   scipy
+    #   stacie
     #   stepup-reprep
     #   zarr
 packaging==25.0
@@ -199,6 +205,7 @@ parso==0.8.4
 path==17.0.0
     # via
     #   -r requirements.in
+    #   stacie
     #   stepup
     #   stepup-reprep
 pexpect==4.9.0
@@ -281,6 +288,7 @@ rpds-py==0.25.1
 scipy==1.16.0
     # via
     #   -r requirements.in
+    #   stacie
     #   stepup-reprep
 semver==3.0.4
     # via stepup-reprep
@@ -288,6 +296,8 @@ six==1.17.0
     # via python-dateutil
 soupsieve==2.7
     # via beautifulsoup4
+stacie==1.0.0
+    # via -r requirements.in
 stack-data==0.6.3
     # via ipython
 stepup==3.0.4
