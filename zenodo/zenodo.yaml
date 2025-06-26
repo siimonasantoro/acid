@@ -23,7 +23,7 @@ metadata:
   resource_type: dataset
   creators:
     - family_name: Toraman
-      given_name: Gozdenur
+      given_name: Gözdenur
       identifiers:
         orcid: '0000-0001-6785-333X'
       affiliations:
@@ -67,7 +67,7 @@ metadata:
             Zwijnaarde, Belgium
   related:
     - scheme: arxiv
-      identifier: '2506.?????'
+      identifier: '2506.20438'
       resource_type: publication
       relation_type: isdescribedby
     - scheme: url

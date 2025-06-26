@@ -15,7 +15,7 @@ abstract: >-
   The total dataset, once generated, is about 80 GB in size.
 authors:
   - family-names: Toraman
-    given-names: Gozdenur
+    given-names: Gözdenur
     orcid: https://orcid.org/0000-0001-6785-333X
     affiliation: >-
       Labo Soete,
@@ -48,9 +48,21 @@ identifiers:
     value: 10.5281/zenodo.15722903
     description: The concept DOI of the work.
 preferred-citation:
+  authors:
+    - family-names: Toraman
+      given-names: Gözdenur
+    - family-names: Fauconnier
+      given-names: Dieter
+    - family-names: Verstraelen
+      given-names: Toon
+  title: >-
+    STable AutoCorrelation Integral Estimator (STACIE):
+    Robust and accurate transport properties from molecular dynamics simulations
+  doi: 10.48550/arXiv.2506.20438
+  type: article
   identifiers:
-    - type: other
-      value: "arXiv:2506.?????"
-      description: The ArXiv preprint of the paper describing ACID.
+    - description: arXiv preprint describing STACIE
+      type: doi
+      value: 10.48550/arXiv.2506.20438
 license: LGPL-3.0-or-later
-repository-code: "https://github.com/molmod/acid"
+repository-code: https://github.com/molmod/acid

@@ -30,17 +30,17 @@ All files in this dataset are licensed under a
 
 If you use this dataset in your research, please cite the following priprint:
 
-> Gozdenur, T.; Fauconnier, D.; Verstraelen, T.
+> Gözdenur, T.; Fauconnier, D.; Verstraelen, T.
 > "STable AutoCorrelation Integral Estimator (STACIE): Robust and accurate transport properties from molecular dynamics simulations"
-> arXiv 2025, arXiv:2506.?????.
+> arXiv 2025, arXiv:2506.20438.
 >
 > ```bibtex
 > @article{Toraman2025,
 >  title = {STable AutoCorrelation Integral Estimator (STACIE): Robust and accurate transport properties from molecular dynamics simulations},
->  url = {https://arxiv.org/abs/2506.?????},
->  doi = {10.48550/arXiv.2506.?????}
+>  url = {https://arxiv.org/abs/2506.20438},
+>  doi = {10.48550/arXiv.2506.20438}
 >  publisher = {arXiv},
->  author = {G"{o}zdenur Toraman and Dieter Fauconnier and Toon Verstraelen},
+>  author = {G\"{o}zdenur Toraman and Dieter Fauconnier and Toon Verstraelen},
 >  year = {2025},
 >  month = jun
 > }
